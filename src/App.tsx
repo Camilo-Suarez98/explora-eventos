@@ -16,7 +16,7 @@ function App() {
     <Router>
       <div className="min-h-screen bg-gray-100">
         <Header />
-        <main className="py-8">
+        <main className="py-8 px-2 md:px-4 lg:px-0">
           <Routes>
             <Route
               path="/"
