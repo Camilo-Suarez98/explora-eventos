@@ -6,7 +6,7 @@ export const Header = () => {
           <div className="flex">
             <div className="flex items-center py-4">
               <img
-                src="../../public/logo-explora.png"
+                src="/logo-explora.png"
                 alt="Explora Eventos Logo"
                 className="w-48"
               />
