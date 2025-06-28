@@ -1,6 +1,7 @@
 import { Link, useParams } from 'react-router-dom';
 import { useStore } from '../store/store';
 import { motion } from 'framer-motion';
+import { typeColors } from '../data/colorsTypeOfEvent';
 
 export const EventDetail = () => {
   const { id } = useParams();
@@ -50,16 +51,18 @@ export const EventDetail = () => {
           className="w-full object-cover rounded-lg"
         />
       </div>
-      <h1 className="text-3xl text-orange-600 font-bold mb-4">{event.title}</h1>
+      <span
+        className={`inline-flex items-center capitalize font-bold px-2 py-1 rounded-full text-md ${typeColors[event.type as keyof typeof typeColors]}`}
+      >
+        {event.type}
+      </span>
+      <h1 className="text-3xl text-orange-600 font-bold my-4">{event.title}</h1>
       <div className="mb-6">
         <div className="max-w-none text-gray-600 text-lg mb-4">
           <p>{event.description}</p>
         </div>
         <p className="text-gray-600 mb-4">
           Fecha: <span className="font-bold">{event.date}</span>
-        </p>
-        <p className="text-gray-600 mb-4">
-          Tipo: <span className="font-bold capitalize">{event.type}</span>
         </p>
         {event.location && (
           <p className="text-gray-600 mb-4">
@@ -72,6 +75,6 @@ export const EventDetail = () => {
           Registrarse
         </button>
       </div>
-    </motion.div>
+    </motion.div >
   );
 };

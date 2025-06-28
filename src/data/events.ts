@@ -24,7 +24,7 @@ export const mockEvents: Event[] = [
     description: "Un taller práctico de programación en Python para principiantes.",
     imageUrl: "/events/taller-programacion.jpg",
     date: "2025-07-20",
-    type: "hibrido",
+    type: "híbrido",
     location: "Sala de Conferencias"
   },
   {
@@ -50,7 +50,7 @@ export const mockEvents: Event[] = [
     description: "Descubre cómo iniciar tu propio negocio con expertos en emprendimiento.",
     imageUrl: "/events/seminario-emprendimiento.jpg",
     date: "2025-08-25",
-    type: "hibrido",
+    type: "híbrido",
     location: "Auditorio Principal"
   }
 ];

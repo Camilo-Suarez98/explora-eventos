@@ -1,4 +1,4 @@
-export type EventType = 'virtual' | 'presencial' | 'hibrido';
+export type EventType = 'virtual' | 'presencial' | 'híbrido';
 
 export interface Event {
   id: number;

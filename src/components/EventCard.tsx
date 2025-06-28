@@ -1,13 +1,8 @@
 import { Link } from 'react-router-dom';
 import type { EventCardProps } from '../types/eventTypes';
+import { typeColors } from '../data/colorsTypeOfEvent';
 
 export const EventCard = ({ event }: EventCardProps) => {
-  const typeColors = {
-    virtual: 'bg-blue-200 text-blue-900',
-    presencial: 'bg-green-200 text-green-900',
-    hibrido: 'bg-purple-200 text-purple-900',
-  };
-
   return (
     <Link
       to={`/event/${event.id}`}
