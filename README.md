@@ -19,11 +19,6 @@ Explora Eventos es una aplicación web que permite a los usuarios:
 - Zustand (para estado global)
 - React Router DOM
 
-## 📋 Requisitos Previos
-
-- Node.js (versión 16 o superior)
-- npm o yarn
-
 ## 🚀 Instalación
 
 1. Clona el repositorio:
