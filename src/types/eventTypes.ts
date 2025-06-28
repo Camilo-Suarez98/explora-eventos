@@ -9,3 +9,13 @@ export interface Event {
   type: EventType;
   location?: string;
 }
+
+export interface EventCardProps {
+  event: {
+    id: number;
+    title: string;
+    imageUrl: string;
+    date: string;
+    type: string;
+  };
+}
