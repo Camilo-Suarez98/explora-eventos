@@ -63,7 +63,3 @@ src/
 ├── App.tsx          # Componente principal
 └── index.css        # Estilos globales
 ```
-
-## 📄 Licencia
-
-Este proyecto está bajo la licencia MIT.
