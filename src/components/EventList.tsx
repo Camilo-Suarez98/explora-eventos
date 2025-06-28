@@ -13,7 +13,7 @@ export const EventList = () => {
   }
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div className="grid grid-cols-1 gap-6 my-8 md:grid-cols-2 lg:grid-cols-3">
       {filteredEvents.map((event) => (
         <EventCard key={event.id} event={event} />
       ))}
