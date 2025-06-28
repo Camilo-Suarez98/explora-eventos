@@ -55,7 +55,7 @@ export const EventFilters = () => {
           <option value="all">Todos los tipos</option>
           <option value="virtual">Virtual</option>
           <option value="presencial">Presencial</option>
-          <option value="hibrido">Híbrido</option>
+          <option value="hibrido">Hibrido</option>
         </select>
       </div>
       <div className="w-full">
