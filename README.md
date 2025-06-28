@@ -1,70 +1,69 @@
-# React + TypeScript + Vite
+# Explora Eventos
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+¡Bienvenido a Explora Eventos! Una aplicación web moderna para explorar y gestionar eventos.
 
-Currently, two official plugins are available:
+## 🚀 Descripción del Proyecto
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Explora Eventos es una aplicación web que permite a los usuarios:
+- Explorar eventos de diferentes tipos (virtual, presencial, híbrido)
+- Filtrar eventos por tipo, fecha y búsqueda de texto
+- Ver detalles completos de cada evento
+- Navegar entre diferentes vistas de manera intuitiva
 
-## Expanding the ESLint configuration
+## 🛠️ Tecnologías Utilizadas
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- React 18
+- TypeScript
+- Vite
+- Tailwind CSS
+- Zustand (para estado global)
+- React Router DOM
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 📋 Requisitos Previos
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+- Node.js (versión 16 o superior)
+- npm o yarn
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 🚀 Instalación
+
+1. Clona el repositorio:
+```bash
+git clone https://github.com/Camilo-Suarez98/explora-eventos.git
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+2. Instala las dependencias:
+```bash
+cd explora-eventos
+npm install
 ```
-# explora-eventos
+
+3. Inicia el servidor de desarrollo:
+```bash
+npm run dev
+```
+
+La aplicación estará disponible en `http://localhost:5173`
+
+## 📱 Características Principales
+
+- **Filtros de Eventos**: Búsqueda por texto, tipo de evento y fecha
+- **Diseño Responsivo**: Interfaz adaptable a diferentes tamaños de pantalla
+- **Navegación Moderna**: Rutas y transiciones suaves
+- **Diseño Atractivo**: Interfaz moderna con Tailwind CSS
+- **Tipado Fuerte**: TypeScript para mayor seguridad en el código
+
+## 📝 Estructura del Proyecto
+
+```
+src/
+├── components/       # Componentes reutilizables
+├── store/           # Estado global con Zustand
+├── types/           # Tipos de TypeScript
+├── data/            # Datos mock para desarrollo
+├── App.tsx          # Componente principal
+└── index.css        # Estilos globales
+```
+
+## 📄 Licencia
+
+Este proyecto está bajo la licencia MIT.
