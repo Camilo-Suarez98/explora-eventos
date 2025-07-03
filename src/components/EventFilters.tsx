@@ -61,7 +61,6 @@ export const EventFilters = () => {
       <div className="w-full">
         <input
           type="date"
-          inputMode="text"
           name="date"
           value={selectedDate}
           onChange={handleDateChange}

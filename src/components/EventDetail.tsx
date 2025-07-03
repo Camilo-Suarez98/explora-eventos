@@ -1,4 +1,4 @@
-import { Link, useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import { useStore } from '../store/store';
 import { motion } from 'framer-motion';
 import { typeColors } from '../data/colorsTypeOfEvent';
@@ -6,6 +6,7 @@ import { typeColors } from '../data/colorsTypeOfEvent';
 export const EventDetail = () => {
   const { id } = useParams();
   const { events } = useStore();
+  const navigate = useNavigate();
   const event = events.find((e) => e.id === Number(id));
 
   if (!event) {
@@ -23,9 +24,11 @@ export const EventDetail = () => {
       className="max-w-4xl mx-auto p-6"
     >
       <div className="flex flex-col md:flex-row gap-4 mb-8">
-        <Link
-          to="/"
-          className="w-1/4 flex items-center gap-1 bg-blue-500 text-sm transition duration-500 text-white font-bold py-2 px-4 rounded hover:bg-blue-600 hover:text-gray-100 md:w-auto"
+        <motion.button
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.95 }}
+          onClick={() => navigate(-1)}
+          className="w-1/4 flex items-center gap-1 bg-blue-500 text-sm transition duration-500 text-white font-bold py-2 px-4 rounded hover:bg-blue-600 hover:text-gray-100 md:w-auto focus:outline-none"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -42,7 +45,7 @@ export const EventDetail = () => {
             />
           </svg>
           Volver
-        </Link>
+        </motion.button>
       </div>
       <div className="mb-6">
         <img
@@ -71,9 +74,12 @@ export const EventDetail = () => {
         )}
       </div>
       <div className="mt-8">
-        <button className="bg-blue-500 text-white font-bold py-2 px-4 rounded transition duration-500 hover:bg-blue-600 hover:text-gray-100">
+        <motion.button
+          whileHover={{ scale: 1.2 }}
+          whileTap={{ scale: 0.80 }}
+          className="bg-blue-500 text-white font-bold py-2 px-4 rounded transition duration-500 hover:bg-blue-600 hover:text-gray-100 focus:outline-none">
           Registrarse
-        </button>
+        </motion.button>
       </div>
     </motion.div >
   );
